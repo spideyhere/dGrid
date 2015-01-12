@@ -1,0 +1,545 @@
+.grid_wrapper {
+	width: 100%;
+	margin: 10px;
+}
+
+.gradient-header {
+	background: #cbcdcd;
+	background: -moz-linear-gradient(top, #cbcdcd 0%, #e7e7e7 13%, #e7e7e7 37%, #fbfbfb 80%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cbcdcd), color-stop(13%,#e7e7e7), color-stop(37%,#e7e7e7), color-stop(80%,#fbfbfb), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top, #cbcdcd 0%,#e7e7e7 13%,#e7e7e7 37%,#fbfbfb 80%,#ffffff 100%);
+}
+
+.gradient-footer {
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 0, #fbfbfb 13%, #e7e7e7 37%, #e7e7e7 80%, #cbcdcd 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#ffffff), color-stop(13%,#fbfbfb), color-stop(37%,#e7e7e7), color-stop(80%,#e7e7e7), color-stop(100%,#cbcdcd));
+	background: -webkit-linear-gradient(top, #ffffff 0,#fbfbfb 13%,#e7e7e7 37%,#e7e7e7 80%,#cbcdcd 100%);
+	background: linear-gradient(to bottom, #ffffff 0,#fbfbfb 13%,#e7e7e7 37%,#e7e7e7 80%,#cbcdcd 100%);
+}
+
+section.grid-wrapper {
+	width:inherit;
+	float:left;
+	border:1px solid #ccc;
+}
+
+section.grid-innerWrapper section.grid-header,
+section.grid-innerWrapper section.grid-body,
+section.grid-innerWrapper section.grid-footer {
+	float:left;
+	width:100%;
+	overflow:scroll;
+	margin-top:-3px;
+}
+
+section.grid-innerWrapper section.grid-header {
+	font-weight: bold;
+}
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper section.grid-footer {
+	margin-top: 0px;
+	font-weight:bold;
+}
+
+/*section.grid-footer div.leftColumns-wrapper, section.grid-footer div.rightColumns-wrapper .grid-footer {	
+	background: rgba(247, 243, 10, 0.42);
+}*/
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper section.grid-footer .grid-cellDirective {
+	border-left:1px solid #cecece;
+	background: rgba(247, 243, 10, 0.42) !important;
+}
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper section.grid-body {
+	-webkit-user-select:none;
+	user-select:none;
+	background:#FFF;
+}
+
+section.grid-body div.rowSelected {
+	background: rgba(45,235,52,0.21)!important;
+	-webkit-user-select: initial;
+}
+
+div.grid-header {
+	background:#EEE;
+	position:relative!important;
+}
+
+div.grid-header a.defExpandBtnClass {
+	width:22px;
+	text-align:center;
+	top:-2px;
+	border-radius:5px;
+	background:#0794BC;
+	color:#fff;
+	cursor:pointer;
+	text-decoration:none;
+	float:left;
+	position:relative!important;
+	margin: 7px;
+	min-height: 18px;
+}
+
+div.grid-header a.expandBtn {
+	background: url('../images/Sprite.png') no-repeat -121px -308px;
+	display: block;
+	width: 20px;
+	height: 19px;
+}
+div.grid-header a.collapseBtn {
+	background: url('../images/Sprite.png') no-repeat -121px -279px;
+	display: block;
+	width: 19px;
+	height: 19px;
+}
+
+div.grid-header div.subColumns-title-wrapper p.subColumns-titleValue {
+	float:left;
+	width:100%;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	height:10px;
+	font-size:.8em;
+	margin: 5px 0 0 0;
+	text-align: center;
+}
+
+div.grid-header div.subColumns-title-wrapper span.expand-subColumns {
+	width:24px;
+	float:left;
+	margin:1% 2% 0 0;
+}
+
+div.grid-header div.subColumns-title-wrapper span.expand-subColumns a.expandBtn {
+	width:inherit;
+	height:18px;
+	margin:0;
+}
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper div.grid-header div.subColumns-header-wrapper {
+	float:left;
+	width:100%;
+	border-top:1px solid #CDCDCD;
+}
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper div.grid-header div.subColumns-header {
+	height: inherit;
+	line-height: 9px;
+	text-align: center;
+	float: left;
+	display: block;
+	position: relative;
+	padding: 3px 0 0 0;
+	word-wrap: break-word;
+}
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper div.grid-header div.subColumns-header:not(:last-child) {
+	border-right: 1px solid #CDCDCD;
+}
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper div.grid-header p.subColumns-headerTxt {
+	margin:0;
+	padding:0;
+}
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper div.grid-header div.grid-cellValue after {
+	position:absolute;
+	content:"";
+	right:45%;
+	bottom:4px;
+	width:0;
+	height:0;
+	border-color:#505050 transparent transparent;
+	border-style:solid;
+	border-width:5.2px 3px 0;
+}
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper div.grid-header p.grid-cellValue {
+	font-family:Helvetica neue !important;
+	color:#4c4c4c;
+	background:0;
+}
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper div.grid-header div.expanded {
+	border-top:1px solid blue!important;
+	-webkit-border-image:0 1 100%;
+	border-width:3px 3px 3px 0;
+}
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper div.grid-header div.expanded-first {
+	border-top:1px solid blue!important;
+	border-left:1px solid blue!important;
+}
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper div.grid-header div.expanded-last {
+	border-top:1px solid blue!important;
+	border-right:1px solid blue!important;
+}
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper div.grid-header a.delColumn {
+	background-position: -246px -313px !important;
+	margin-left: 0%;
+	right: -9px;
+	top: 2px;
+	cursor:pointer;
+	z-index: 10;
+}
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper div.grid-header>.grid-cellDirective.hasSubGroup p.grid-cellValue .expand-subGroups a {
+	top:-4px;
+}
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper div.subColumns-cell-wrapper div.subColumns-cell:not(:first-child) {
+	text-align:left;
+	text-indent: 5px;
+}
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper div.subColumns-cell-wrapper div.subColumns-cell:first-child {
+	/*border:none!important;*/
+	text-align: left;
+	text-indent: 5px;
+}
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper div.subColumns-cell-wrapper p.subColumns-subCell {
+	margin:0;
+	padding:1%;
+}
+
+section.grid-wrapper  div.grid-cellDirective ,div.subColumns-cell-wrapper{
+	text-align:left;
+	font-size:.75em;
+	width:100%;
+	overflow:hidden;
+	height:inherit;
+	font-family:lucida grande;
+	color:#4c4c4c;
+	position:relative;
+	margin:0;
+	line-height: 10px;
+}
+
+section.grid-wrapper .grid-body div.grid-cellDirective, .grid-body div.subColumns-cell-wrapper, .grid-footer .grid-cellDirective, .grid-footer .subColumns-cell-wrapper  {
+		line-height: 30px !important;
+		text-overflow: ellipsis;
+}
+
+.subColumns-cell-wrapper {
+	border-left: none !important;
+}
+
+.subColumns-cell-wrapper .subColumns-cell:first-child {
+	border-left: 1px solid #cecece !important;
+}
+
+section.grid-wrapper div.grid-cellDirective span.grid-header-cellValue:not(.expand-subGroups) {
+	position:absolute;
+	top:30%;
+	width:100%;
+	left:0;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+div.grid-cellDirective.hasSubGroup span.grid-header-cellValue {
+	width: 65% !important;
+	left: 35% !important;
+}
+
+div.grid-cellDirective span.cellcontent {
+	margin: 0 5px 0 5px;
+	cursor: pointer;
+	text-overflow: ellipsis;
+	white-space: normal;
+	/*display: inline-block;*/
+	line-height: 10px;
+	overflow: hidden;
+}
+
+.grid-body div.grid-cellDirective, .grid-body div.subColumns-cell, .grid-footer div.grid-cellDirective, .grid-footer div.subColumns-cell {
+	height: 100%;
+}
+
+div.grid-cellDirective .subColumns-header
+{
+	cursor: pointer;
+	overflow: hidden;
+}
+
+div.subGroups-title-wrapper p {
+	margin-top: 10px;
+}
+
+div.grid-cellDirective.subTotal span.cellcontent {
+	cursor: default !important;
+	text-decoration: none !important;
+}
+
+div.grid-header div.grid-cellDirective span.cellcontent {
+	position: absolute;
+	top: 36%;
+	width: 97%;
+}
+
+.cellcontenthover span.cellcontent:hover {	
+	text-decoration: underline;
+}
+section.grid-wrapper  span.expand-subGroups {
+	position:absolute;
+	right:0;
+	top:35%;
+	z-index:19;
+}
+
+/*section.grid-wrapper div.hasSubGroup span {
+	left:0!important;
+}*/
+
+section.grid-wrapper div.grid-column>div.grid-cellDirective {
+	border-left:1px solid #cecece;
+	border-bottom:1px solid #cecece; 
+}
+
+section.grid-wrapper div.grid-header>div {
+	border:1px solid #CDCDCD;
+}
+
+div.grid-subGroups  .subGroups-title-wrapper {
+	font-size: 0.85em;
+	text-align: center;
+	border-bottom: none !important;
+	border-right: none !important;
+}
+
+div.subGroups-wrapper {
+	border: none !important;
+}
+
+section.grid-wrapper div.grid-column div.grid-cellDirective:nth-child(even), section.grid-wrapper div.grid-column div.grid-subGroups div.grid-cellDirective:nth-child(even) {
+	background:#F7F7F7;
+}
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper div.leftColumns-wrapper {
+	float:left;
+	overflow-x:scroll;
+	overflow-y:hidden;
+}
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper div.rightColumns-wrapper {
+	overflow-x:scroll;
+	float:left;
+}
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper p.grid-noData {
+	text-align:center;
+	width:200px;
+	position:relative;
+	top:45%;
+	margin:0 auto;
+}
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper div.separator {
+	float:left;
+	border:1px solid #b2b2b2;
+	cursor:col-resize;
+	width:0;
+}
+
+section.grid-header ::-webkit-scrollbar, section.grid-body ::-webkit-scrollbar{
+	width:12px;
+	display:none;
+}
+
+section.grid-header ::-webkit-scrollbar-track, section.grid-body ::-webkit-scrollbar{
+	-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius:0;
+}
+
+section.grid-header ::-webkit-scrollbar-thumb, section.grid-body ::-webkit-scrollbar{
+	border-radius:0;
+	-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+.border-gradient-LtR,.gradient-header {
+	background:0;
+}
+
+section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper div.grid-header div.subColumns-title-wrapper,section.grid-wrapper section.gridOverflow-Wrapper section.grid-innerWrapper div.subColumns-cell-wrapper {
+	float:left;
+	width:100%;
+}
+
+.expandGridHighlight:not(.grid-footer)
+{
+	background-color: rgba(120, 196, 231, 0.34) !important;
+}
+
+.horizontalScrollFixForAlwaysScroll .grid-header,
+.horizontalScrollFixForAlwaysScroll .grid-body,
+.horizontalScrollFixForAlwaysScroll .grid-footer {
+	overflow-x: hidden !important;
+}
+
+
+.sub-cellContent {
+    width: 97%;
+    line-height: 10px !important;
+    top: 0 !important;
+    position: relative !important;
+    cursor: pointer;
+    margin: 1px;
+    text-align: right !important;
+}
+
+/*ToolTip and Pointer Style */
+ 
+.tooltip, .pointer-arrow:after {
+  background: #EEE;
+  border: 1px solid #cbcbcb;
+} 
+.tooltip {
+      pointer-events: none;
+      /*opacity: 0;*/
+      display: inline-block;
+      position: absolute;
+      padding: 8px 8px;
+      color: #000;
+      border-radius: 10px;
+      margin-top: 20px;
+      text-align: left;
+      font-size: 11px;
+      font-family: Helvetica neue;
+      font-stretch: condensed;
+      text-decoration: none; 
+      z-index: 20; 
+}
+.pointer-arrow {
+        width: 70px;
+        height: 15px;
+        overflow: hidden;
+        position: absolute; 
+        left: 35px;
+        margin-left: -35px;
+        bottom: -14px;
+}
+.pointer-arrow:after { 
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: -5px;
+      width: 10px;
+      height: 8px;
+      -webkit-transform: rotate(45deg);
+      -moz-transform:    rotate(45deg);
+      -ms-transform:     rotate(45deg);
+      -o-transform:      rotate(45deg);
+}
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid black;
+}
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid black;
+}
+
+.sortIndicator {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid black;
+}
+
+div.grid-cellDirective.subTotal, div.subColumns-cell-wrapper.subTotal {
+	background: rgba(208, 164, 39, 0.31) !important;
+}
+div.tempDIV {
+	width: 100%;
+	float: left;
+}
+.conditionalHighlight
+{
+    background-color: #d5f4dd !important;
+}
+.inlineSort
+{
+	display: inline-block;
+	margin: 0 5%;
+	position: absolute;
+	bottom:  5%;
+	left: 42%;
+	cursor: pointer;
+}
+
+.flLeft {
+	float: left;
+}
+
+.flRight {
+	float: right;
+}
+
+.accelerated {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s ;
+}
+
+.accelerated1 {
+   -webkit-backface-visibility: hidden;
+   -moz-backface-visibility: hidden;
+   -ms-backface-visibility: hidden;
+   backface-visibility: hidden;
+
+   -webkit-perspective: 1000;
+   -moz-perspective: 1000;
+   -ms-perspective: 1000;
+   perspective: 1000;
+   /* Other transform properties here */
+}
+
+.accelerated_web{
+   -webkit-transform: translate3d(0, 0, 0);
+   -moz-transform: translate3d(0, 0, 0);
+   -ms-transform: translate3d(0, 0, 0);
+   transform: translate3d(0, 0, 0);
+  /* Other transform properties here */
+}
+
+.grid-body .grid-cellDirective.number, .grid-footer .grid-cellDirective.number,
+.grid-body .grid-cellDirective.float, .grid-footer .grid-cellDirective.float {
+	text-align: right;
+}
+
+.cellcontent  b { 
+	color: #FFA300;
+}
+
+.hide {
+	display: none;
+}
+
+.rowHighlighter {
+	/*background: rgba(120, 196, 231, 0.34) !important;*/
+	background:#c5e3ed !important;
+    -webkit-user-select : initial;
+    user-select: initial;
+}
